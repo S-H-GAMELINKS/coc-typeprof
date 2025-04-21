@@ -1,0 +1,51 @@
+{
+  "name": "coc-typeprof",
+  "version": "0.0.1-development",
+  "description": "typeprof lsp extension for coc.nvim",
+  "author": "S-H-GAMELINKS <gamelinks007@gmail.com>",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "keywords": [
+    "coc.nvim"
+  ],
+  "engines": {
+    "coc": "^0.0.82"
+  },
+  "scripts": {
+    "watch": "node esbuild.mjs --watch",
+    "build": "node esbuild.mjs",
+    "prepare": "node esbuild.mjs"
+  },
+  "devDependencies": {
+    "coc.nvim": "^0.0.83-next.18",
+    "esbuild": "^0.19.8",
+    "typescript": "^5.3.3"
+  },
+  "activationEvents": [
+    "onLanguage:ruby",
+    "onLanguage:rbs"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "ruby",
+        "extensions": [".rb"],
+        "aliases": ["Ruby"]
+      }
+    ],
+    "configuration": {
+      "typeprof": {
+        "type": "object",
+        "title": "coc-typeprof configuration",
+        "properties": {
+          "coc-typeprof.enabled": {
+            "type": "boolean",
+            "default": true,
+            "description": "Enable coc-typeprof extension"
+          }
+        }
+      }
+    }
+  },
+  "packageManager": "yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72"
+}
