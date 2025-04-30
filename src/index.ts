@@ -59,11 +59,11 @@ export async function activate(context: ExtensionContext): Promise<void> {
   const clientOptions: LanguageClientOptions = {
     documentSelector: [
       { scheme: 'file', language: 'ruby' },
-      { scheme: 'file', pattern: '**/*.rb' }
+      { scheme: 'file', language: 'rbs' },
     ],
     synchronize: {
       configurationSection: 'typeprof',
-      fileEvents: workspace.createFileSystemWatcher('{**/*.rb}')
+      fileEvents: workspace.createFileSystemWatcher('{**/*.rb,**/*.rbs}')
     },
     initializationOptions: {
       capabilities: {
