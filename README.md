@@ -3,16 +3,19 @@
 typeprof lsp extension for coc.nvim
 
 ## Install
+### vim-plug
 
-`:CocInstall coc-typeprof`
+```
+Plug 'S-H-GAMELINKS/coc-typeprof'
+```
 
 ## Keymaps
 
-`nmap <silent> <C-l> <Plug>(coc-coc-typeprof-keymap)`
-
-## Lists
-
-`:CocList demo_list`
+```
+nmap <silent> <space>df <Plug>(coc-definition)
+nmap <silent> <space>rf <Plug>(coc-references)
+nmap <silent> <space>dt <Plug>(coc-type-definition)
+```
 
 ## License
 
